@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Movie;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class MovieController extends Controller
@@ -16,7 +15,7 @@ class MovieController extends Controller
         $movie = new Movie;
         $movies = $movie->getAllMovies();
 
-        return view('movies/index', ['movies' => $movies]);
+        return view('movies',['movies' => $movies]);
     }
 
     /**
